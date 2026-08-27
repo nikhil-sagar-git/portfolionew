@@ -1,0 +1,29 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 0 40px;
+  text-align: center;
+}
+
+.footer-copy {
+  color: var(--paper-dim);
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.footer-admin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: #5c6b69;
+  border: none;
+  background: none;
+  padding: 4px 8px;
+  opacity: 0.7;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.footer-admin-link:hover {
+  opacity: 1;
+  color: var(--teal);
+}

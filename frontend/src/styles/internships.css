@@ -1,0 +1,95 @@
+.timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.timeline-rail {
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -32px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--teal);
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--teal-dim);
+}
+
+.timeline-content {
+  padding: 22px;
+}
+
+.timeline-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.company-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.timeline-content h3 {
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+}
+
+.timeline-content h4 {
+  font-size: 0.92rem;
+  color: var(--teal);
+  font-weight: 500;
+  margin: 0;
+}
+
+.timeline-duration,
+.timeline-location {
+  font-size: 0.82rem;
+  color: var(--paper-dim);
+  display: block;
+}
+
+.timeline-desc {
+  margin: 12px 0;
+}
+
+.timeline-highlights {
+  margin: 0 0 14px;
+  padding-left: 18px;
+  color: var(--paper-dim);
+}
+
+.timeline-highlights li {
+  margin-bottom: 4px;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 480px) {
+  .timeline {
+    padding-left: 24px;
+  }
+
+  .timeline-dot {
+    left: -24px;
+  }
+}

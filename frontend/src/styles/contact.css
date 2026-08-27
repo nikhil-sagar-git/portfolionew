@@ -1,0 +1,31 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  max-width: 700px;
+}
+
+.contact-item {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color 0.15s ease;
+}
+
+.contact-item:hover {
+  border-color: var(--teal-dim);
+}
+
+.contact-item span {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--paper-dim);
+}
+
+.contact-item strong {
+  font-size: 1rem;
+  color: var(--teal);
+  word-break: break-word;
+}
