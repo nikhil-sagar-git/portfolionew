@@ -83,6 +83,7 @@
 
 
 
+
 import { useEffect, useState } from "react";
 import * as api from "../services/api.js";
 import "../styles/certifications.css";
@@ -91,6 +92,8 @@ const Certifications = () => {
   const [certifications, setCertifications] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  
+  // Store the image that is clicked
   const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
@@ -104,14 +107,8 @@ const Certifications = () => {
         setLoading(false);
       }
     };
-
     load();
   }, []);
-
-  // Close image popup
-  const closeImage = () => {
-    setSelectedImage(null);
-  };
 
   return (
     <div className="page container">
@@ -144,15 +141,14 @@ const Certifications = () => {
           {certifications.map((cert) => (
             <div className="cert-card card" key={cert._id}>
 
-              <div
-                className="cert-image-frame"
-                onClick={() => cert.image && setSelectedImage(cert.image)}
-              >
+              {/* Certificate Image */}
+              <div className="cert-image-frame">
                 {cert.image && (
                   <img
                     src={cert.image}
                     alt={cert.title}
-                    className="cert-image"
+                    onClick={() => setSelectedImage(cert.image)}
+                    className="clickable-cert-image"
                   />
                 )}
               </div>
@@ -194,24 +190,23 @@ const Certifications = () => {
         </div>
       )}
 
-      {/* Image Popup */}
+      {/* Certificate Popup */}
       {selectedImage && (
-        <div
-          className="image-modal"
-          onClick={closeImage}
-        >
+        <div className="cert-popup">
+
+          {/* Close button at top */}
           <button
-            className="image-modal-close"
-            onClick={closeImage}
+            className="cert-popup-close"
+            onClick={() => setSelectedImage(null)}
           >
             ×
           </button>
 
+          {/* Large Certificate */}
           <img
             src={selectedImage}
             alt="Certificate"
-            className="image-modal-content"
-            onClick={(e) => e.stopPropagation()}
+            className="cert-popup-image"
           />
         </div>
       )}
@@ -220,5 +215,4 @@ const Certifications = () => {
 };
 
 export default Certifications;
-
 
