@@ -1,4 +1,4 @@
-.cert-wall {
+/* .cert-wall {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 24px;
@@ -60,4 +60,73 @@
 .cert-verify {
   margin-top: auto;
   align-self: flex-start;
+} */
+
+
+
+
+
+
+```css
+/* Certification image */
+.cert-image-frame {
+  cursor: pointer;
 }
+
+.cert-image {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cert-image:hover {
+  transform: scale(1.02);
+}
+
+/* Full-screen image modal */
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 30px;
+  cursor: zoom-out;
+}
+
+/* Large certificate image */
+.image-modal-content {
+  max-width: 95vw;
+  max-height: 95vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+
+/* Close button */
+.image-modal-close {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: black;
+  font-size: 32px;
+  line-height: 40px;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.image-modal-close:hover {
+  background: #ddd;
+}
+```
