@@ -15,14 +15,14 @@ const Home = () => {
           <p className="hero-title">{title}</p>
           <p className="hero-tagline">{tagline}</p>
           <p className="hero-location">{location}</p>
-          <div className="hero-actions">
+          {/* <div className="hero-actions">
             <a href={resumeUrl} className="btn btn-primary" download>
               Download Résumé
             </a>
             <a href="/contact" className="btn btn-secondary">
               Contact Me
             </a>
-          </div>
+          </div> */}
         </div>
         <div className="hero-photo-wrap">
           <img src={profileImage} alt={name} className="hero-photo" />
