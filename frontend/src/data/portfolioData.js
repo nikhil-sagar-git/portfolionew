@@ -8,7 +8,7 @@ export const personalInfo = {
   tagline: "I build clean, dependable web products and tinker with machine learning on the side.",
   location: "Hyderabad, Telangana, India",
   email: "rasalanikhil@gmail.com",
-  phone: "+91 90000 00000",
+  phone: "+91 9381727940",
   profileImage: "/images/phot1.jpeg",
   resumeUrl: "/resume.pdf",
 
