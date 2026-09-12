@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <div className="page container">
       <h2 className="section-heading">Contact</h2>
-      <p className="section-subheading">Feel free to reach out through any of these.</p>
+      
 
       <div className="contact-grid">
         {email && (
