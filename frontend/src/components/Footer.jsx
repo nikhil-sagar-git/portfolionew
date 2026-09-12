@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <p className="footer-copy">© {year} Rasala Nikhil</p>
+        {/* <p className="footer-copy">© {year} Rasala Nikhil</p> */}
         <button
           className="footer-admin-link"
           onClick={() => navigate("/admin/login")}
