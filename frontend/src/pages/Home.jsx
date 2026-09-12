@@ -31,7 +31,7 @@ const Home = () => {
 
       {/* About */}
       <section className="about-block">
-        <h2 className="section-heading">About</h2>
+        <h2 className="section-heading">About Me</h2>
         <p>{about}</p>
       </section>
 
@@ -66,13 +66,13 @@ const Home = () => {
       </section>
 
       {/* Resume CTA */}
-      <section className="resume-cta">
+      {/* <section className="resume-cta">
         <h3>Want the full picture?</h3>
         <p>Grab a copy of my résumé for a complete rundown of my experience.</p>
         <a href={resumeUrl} className="btn btn-primary" download>
           Download Résumé
         </a>
-      </section>
+      </section> */}
     </div>
   );
 };
