@@ -16,9 +16,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-inner">
-        <NavLink to="/" className="navbar-brand" onClick={() => setOpen(false)}>
+        {/* <NavLink to="/" className="navbar-brand" onClick={() => setOpen(false)}>
           Rasala<span>.</span>
-        </NavLink>
+        </NavLink> */}
 
         <button
           className="navbar-toggle"
