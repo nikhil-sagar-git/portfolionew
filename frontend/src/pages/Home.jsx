@@ -61,7 +61,7 @@ const Home = () => {
           <div className="education-item card" key={edu.id}>
             <h3>{edu.school}</h3>
             <h3>{edu.degree}</h3>
-            <span>percentage{edu.percentage}</span>
+            <span>percentage:{edu.percentage}</span>
             <span>{edu.duration}</span>
           </div>
         ))}
