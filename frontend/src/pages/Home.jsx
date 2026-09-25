@@ -64,15 +64,6 @@ const Home = () => {
           </div>
         ))}
       </section>
-
-      {/* Resume CTA */}
-      {/* <section className="resume-cta">
-        <h3>Want the full picture?</h3>
-        <p>Grab a copy of my résumé for a complete rundown of my experience.</p>
-        <a href={resumeUrl} className="btn btn-primary" download>
-          Download Résumé
-        </a>
-      </section> */}
     </div>
   );
 };
