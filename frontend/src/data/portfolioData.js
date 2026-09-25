@@ -58,7 +58,7 @@ export const personalInfo = {
     },
     {
       category: "Tools",
-      items: ["Git", "GitHub", "Docker", "Postman","MongoDB Atlas","MongoDB Compass","Kaggle","Docker Desktop"],
+      items: ["Git", "GitHub", "Postman","MongoDB Atlas","MongoDB Compass","Kaggle","Docker Desktop"],
     }
   ],
 
