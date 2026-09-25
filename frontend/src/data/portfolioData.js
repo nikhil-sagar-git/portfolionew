@@ -13,7 +13,7 @@ export const personalInfo = {
   resumeUrl: "/resume.pdf",
 
   about:
-    "I'm a final-year Computer Science student who likes turning fuzzy problems into working software. Most of my time goes into full-stack web development with React and Node, but I've spent the last year going deeper into applied machine learning — recommendation systems, NLP pipelines, and practical AI applications. I care about clear interfaces, readable code, and shipping things that actually get used.",
+    "Aspiring AI and Full-Stack Developer with a strong interest in Artificial Intelligence, Machine Learning, Generative AI, Agentic ai and web development. Experienced in building projects. Passionate about developing real-world AI-powered applications and seeking opportunities as an AI/ML Engineer, Generative AI Developer, or Full-Stack Developer where I can apply my skills and continue learning.",
 
   socials: {
     github: "https://github.com/nikhil-sagar-git",
