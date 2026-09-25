@@ -59,7 +59,9 @@ const Home = () => {
         <h2 className="section-heading">Education</h2>
         {education.map((edu) => (
           <div className="education-item card" key={edu.id}>
-            <h4>{edu.degree}</h4>
+            <h3>{edu.school}</h3>
+            <h3>{edu.degree}</h3>
+            <h3>{edu.percentage}</h3>
             <span>{edu.duration}</span>
           </div>
         ))}

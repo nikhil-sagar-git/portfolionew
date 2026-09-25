@@ -24,48 +24,65 @@ export const personalInfo = {
   skills: [
     {
       category: "Languages",
-      items: ["JavaScript", "TypeScript", "Python", "Java", "SQL"],
+      items: ["JavaScript","Python", "Java","C"],
     },
     {
-      category: "Frontend",
-      items: ["React", "Redux", "Next.js", "HTML", "CSS"],
+      category: "MERN STACK",
+      items: ["React.js","Node.js","Express","SQL","Mongo DB","HTML", "CSS"],
     },
     {
-      category: "Backend",
-      items: ["Node.js", "Express", "REST APIs", "MongoDB", "MySQL"],
-    },
-    {
-      category: "AI / ML",
+      category: "Machine Learning & Deep Learning",
       items: [
         "Python",
         "Pandas",
         "NumPy",
         "scikit-learn",
-        "PyTorch",
-        "Machine Learning",
-        "NLP",
-        "Generative AI",
-        "RAG",
-        "LangChain",
-        "LangGraph",
+        "tensor flow",
+        "Jupyter Notebook",
+        "CNN",
+        "ANN",
+        "RNN",
       ],
     },
     {
-      category: "Tools",
-      items: ["Git", "GitHub", "Docker", "Postman", "Figma", "AWS"],
+      category:"Devops",
+      items:["AWS","Jenkins","ubuntu","Docker","Render","Vercel"]
     },
+    {
+      category:"Natural Language Processing",
+      items:["Spacy","NLTK","BERT","FastText"]
+    },
+    {
+      category:"Artificial Intelligence",
+      items:["Generative AI","Agentic AI","Prompt Engineering","Lang Chain","Lang Graph","Retrieval Augmented Generation"]
+    },
+    {
+      category: "Tools",
+      items: ["Git", "GitHub", "Docker", "Postman","MongoDB Atlas","MongoDB Compass","Kaggle","Docker Desktop"],
+    }
   ],
 
   education: [
     {
       id: "edu-1",
+      school:"Maturi Venkata Subba rao Engineering College",
       degree: "B.Tech in Computer Science & Engineering",
-      duration: "2022 — 2026",
+      duration: "2023 — Currently pursuing(2027)",
+      percentage:"87.3"
     },
     {
       id: "edu-2",
+      school:"Narayana Junior College",
       degree: "Senior Secondary",
-      duration: "2020 — 2022",
+      duration: "2021 — 2023",
+      percentage:"98"
+    },
+    {
+      id: "edu-3",
+      school:"Geetha Vidyalayam High School",
+      degree: "SSC",
+      duration: "2021",
+      percentage:"100"
     },
   ],
 };
