@@ -35,6 +35,7 @@ const Internships = () => {
       <p className="section-subheading">
         Where I've worked and what I built while there.
       </p>
+      <span>Click on image to view certificate</span>
 
       {/* Loading */}
       {loading && (
