@@ -7,6 +7,9 @@ const Internships = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
+  // Certificate popup state
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
+
   useEffect(() => {
     const load = async () => {
       try {
@@ -18,44 +21,73 @@ const Internships = () => {
         setLoading(false);
       }
     };
+
     load();
   }, []);
 
   return (
     <div className="page container">
       <h2 className="section-heading">Internships</h2>
-      <p className="section-subheading">Where I've worked and what I built while there.</p>
 
-      {loading && <p className="state-message">Loading internships...</p>}
-      {error && !loading && <p className="state-message error">{error}</p>}
+      <p className="section-subheading">
+        Where I've worked and what I built while there.
+      </p>
+
+      {loading && (
+        <p className="state-message">Loading internships...</p>
+      )}
+
+      {error && !loading && (
+        <p className="state-message error">{error}</p>
+      )}
 
       {!loading && !error && internships.length === 0 && (
-        <p className="state-message">No internships added yet.</p>
+        <p className="state-message">
+          No internships added yet.
+        </p>
       )}
 
       {!loading && !error && internships.length > 0 && (
         <div className="timeline">
           <div className="timeline-rail" />
+
           {internships.map((intern) => (
             <div className="timeline-item" key={intern._id}>
               <span className="timeline-dot" />
+
               <div className="timeline-content card">
+
                 <div className="timeline-head">
                   {intern.logo && (
-                    <img src={intern.logo} alt={intern.company} className="company-logo" />
+                    <img
+                      src={intern.logo}
+                      alt={intern.company}
+                      className="company-logo"
+                    />
                   )}
+
                   <div>
                     <h3>{intern.role}</h3>
                     <h4>{intern.company}</h4>
                   </div>
                 </div>
-                <span className="timeline-duration">{intern.duration}</span>
+
+                <span className="timeline-duration">
+                  {intern.duration}
+                </span>
+
                 {intern.location && (
-                  <span className="timeline-location">{intern.location}</span>
+                  <span className="timeline-location">
+                    {intern.location}
+                  </span>
                 )}
+
                 {intern.description && (
-                  <p className="timeline-desc">{intern.description}</p>
+                  <p className="timeline-desc">
+                    {intern.description}
+                  </p>
                 )}
+
                 {intern.highlights?.length > 0 && (
                   <ul className="timeline-highlights">
                     {intern.highlights.map((h, i) => (
@@ -63,6 +95,7 @@ const Internships = () => {
                     ))}
                   </ul>
                 )}
+
                 <div className="tech-row">
                   {(intern.techStack || []).map((tech) => (
                     <span className="pill" key={tech}>
@@ -70,9 +103,57 @@ const Internships = () => {
                     </span>
                   ))}
                 </div>
+
+                {/* Certificate */}
+                {intern.certificate && (
+                  <div className="certificate-section">
+                    <h4>Certificate</h4>
+
+                    <img
+                      src={intern.certificate}
+                      alt={`${intern.company} certificate`}
+                      className="certificate-image"
+                      onClick={() =>
+                        setSelectedCertificate(intern.certificate)
+                      }
+                    />
+
+                    <p className="certificate-hint">
+                      Click to view certificate
+                    </p>
+                  </div>
+                )}
+
               </div>
             </div>
           ))}
+        </div>
+      )}
+
+      {/* Certificate Popup */}
+      {selectedCertificate && (
+        <div
+          className="certificate-modal"
+          onClick={() => setSelectedCertificate(null)}
+        >
+          <div
+            className="certificate-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              className="certificate-close"
+              onClick={() => setSelectedCertificate(null)}
+            >
+              ✕
+            </button>
+
+            <img
+              src={selectedCertificate}
+              alt="Certificate"
+              className="certificate-full-image"
+            />
+          </div>
         </div>
       )}
     </div>
