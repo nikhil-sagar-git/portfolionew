@@ -1,4 +1,4 @@
-.timeline {
+/* .timeline {
   position: relative;
   padding-left: 32px;
 }
@@ -92,4 +92,76 @@
   .timeline-dot {
     left: -24px;
   }
+} */
+
+
+
+
+
+/* Normal certificate image */
+.certificate-image {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.certificate-image:hover {
+  transform: scale(1.02);
+}
+
+
+/* Full-screen overlay */
+.certificate-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.85);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+
+  padding: 30px;
+}
+
+
+/* Enlarged certificate */
+.certificate-popup-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+
+  border-radius: 8px;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+/* X button */
+.certificate-close {
+  position: fixed;
+
+  top: 25px;
+  right: 30px;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: white;
+  color: black;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  z-index: 10000;
+}
+
+.certificate-close:hover {
+  background: #eee;
 }

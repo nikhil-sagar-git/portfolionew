@@ -7,7 +7,7 @@ const Internships = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // Certificate popup state
+  // For certificate popup
   const [selectedCertificate, setSelectedCertificate] = useState(null);
 
   useEffect(() => {
@@ -104,24 +104,16 @@ const Internships = () => {
                   ))}
                 </div>
 
-                {/* Certificate */}
+                {/* Certificate - normal size initially */}
                 {intern.certificate && (
-                  <div className="certificate-section">
-                    <h4>Certificate</h4>
-
-                    <img
-                      src={intern.certificate}
-                      alt={`${intern.company} certificate`}
-                      className="certificate-image"
-                      onClick={() =>
-                        setSelectedCertificate(intern.certificate)
-                      }
-                    />
-
-                    <p className="certificate-hint">
-                      Click to view certificate
-                    </p>
-                  </div>
+                  <img
+                    src={intern.certificate}
+                    alt={`${intern.company} certificate`}
+                    className="certificate-image"
+                    onClick={() =>
+                      setSelectedCertificate(intern.certificate)
+                    }
+                  />
                 )}
 
               </div>
@@ -130,30 +122,25 @@ const Internships = () => {
         </div>
       )}
 
-      {/* Certificate Popup */}
+      {/* Large image popup */}
       {selectedCertificate && (
         <div
-          className="certificate-modal"
+          className="certificate-overlay"
           onClick={() => setSelectedCertificate(null)}
         >
-          <div
-            className="certificate-modal-content"
-            onClick={(e) => e.stopPropagation()}
+          <button
+            className="certificate-close"
+            onClick={() => setSelectedCertificate(null)}
           >
-            {/* Close button */}
-            <button
-              className="certificate-close"
-              onClick={() => setSelectedCertificate(null)}
-            >
-              ✕
-            </button>
+            ✕
+          </button>
 
-            <img
-              src={selectedCertificate}
-              alt="Certificate"
-              className="certificate-full-image"
-            />
-          </div>
+          <img
+            src={selectedCertificate}
+            alt="Certificate"
+            className="certificate-popup-image"
+            onClick={(e) => e.stopPropagation()}
+          />
         </div>
       )}
     </div>
