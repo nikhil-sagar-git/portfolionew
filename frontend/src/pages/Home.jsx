@@ -12,7 +12,7 @@ const Home = () => {
         <div>
           <p className="hero-eyebrow">PORTFOLIO</p>
           <b style={{ color: "yellow" }}>
-  As the backend is deployed on Render, it may take a few seconds to load.
+  As the backend is deployed on Render, it may take a few seconds to load Internships, Certificates and Projects Data.
 </b>
           <h1>{name}</h1>
           <p className="hero-title">{title}</p>
