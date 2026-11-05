@@ -11,6 +11,7 @@ const Home = () => {
       <section className="hero">
         <div>
           <p className="hero-eyebrow">PORTFOLIO</p>
+          <i style={color="yellow"}>As backend is deployed on render it takes some time</i>
           <h1>{name}</h1>
           <p className="hero-title">{title}</p>
           <p className="hero-tagline">{tagline}</p>
